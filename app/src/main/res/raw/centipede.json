@@ -1,0 +1,23 @@
+{"frames":{
+	"width":52,
+	"height":60,
+	"regX":0,
+	"regY":0,
+	"count":62,
+}, "animations":{
+	"CentipedeBodyWalk":[14, 26],
+	"CentipedeWalk":[42, 55],
+	"CentipedeButtWalk":[0, 12],
+	"CentipedeBodyAltWalk":[28, 40],
+	"CentipedeBodyWalkDown":[27, 27],
+	"CentipedeButtDown":[13, 13],
+	"BodyDown":[41, 41],
+	"Shooter":[56, 56],
+	"Bullet":[57, 57],
+	"MushroomA":[58, 58],
+	"MushroomB":[59, 59],
+	"MushroomC":[60, 60],
+	"MushroomD":[61, 61],
+	"Mushrooms":[58, 61]
+}, "images":["centipede.png"]}
+
