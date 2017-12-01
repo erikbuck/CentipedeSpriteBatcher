@@ -44,8 +44,8 @@ public class CentipedeBoard {
     private Random mRandom;
 
     public CentipedeBoard(InputStream inputStream, int widthPixels, int heightPixels) {
-        final int bitmapHeight = 426;
-        final int bitmapWidth =  501;
+        final int bitmapHeight = 512; // was 426;
+        final int bitmapWidth =  512; // was 501;
 
         mAnimatedSprite = new AnimatedSprite(
                 inputStream,
