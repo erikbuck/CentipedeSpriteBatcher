@@ -4,10 +4,11 @@ import android.annotation.SuppressLint;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.twicecircled.spritebatcher.Drawer;
 import com.twicecircled.spritebatcher.SpriteBatcher;
@@ -21,7 +22,7 @@ import javax.microedition.khronos.opengles.GL10;
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class CentipedeFullscreenActivity extends AppCompatActivity  implements Drawer {
+public class CentipedeFullscreenActivity extends AppCompatActivity implements Drawer {
 
     private static final double MILLIS_PER_SEC = 1000.0;
     private static final double MIN_TIME_BETWEEN_UPDATES_SEC = 0.006;
