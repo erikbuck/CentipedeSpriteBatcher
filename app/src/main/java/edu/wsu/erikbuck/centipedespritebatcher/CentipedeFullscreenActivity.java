@@ -28,6 +28,9 @@ public class CentipedeFullscreenActivity extends AppCompatActivity implements Dr
     private static final double MIN_TIME_BETWEEN_UPDATES_SEC = 0.006;
     private static final double MAX_TIME_BETWEEN_UPDATES_SEC = 0.032;
 
+    private SoundManager mSoundManager;
+    private int mSoundIndex;
+
     private GLSurfaceView mGLSurfaceView;
     private CentipedeBoard mBoard;
     private Date mCurrentInstant;
@@ -67,7 +70,11 @@ public class CentipedeFullscreenActivity extends AppCompatActivity implements Dr
                     break;
                 case MotionEvent.ACTION_MOVE:
                     mBoard.movePlayerToPosition(motionEvent.getX(), motionEvent.getY());
-                    mBoard.shoot();
+                    boolean didShoot = mBoard.shoot();
+                    if(didShoot) {
+                        mSoundManager.playSound(mSoundIndex % 4);
+                        mSoundIndex += 1;
+                    }
                     break;
                 case MotionEvent.ACTION_UP:
                 case MotionEvent.ACTION_CANCEL:
@@ -80,6 +87,15 @@ public class CentipedeFullscreenActivity extends AppCompatActivity implements Dr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mSoundManager = new SoundManager();
+        mSoundManager.initSounds(this);
+        mSoundManager.addSound(0, R.raw.pew);
+        mSoundManager.addSound(1, R.raw.pew);
+        mSoundManager.addSound(2, R.raw.pew);
+        mSoundManager.addSound(3, R.raw.pew);
+        mSoundManager.addSound(4, R.raw.pop);
+        mSoundIndex = 0;
 
         setContentView(R.layout.activity_centipede_fullscreen);
 

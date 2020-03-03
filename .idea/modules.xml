@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CentipedeSpriteBatcher.iml" filepath="$PROJECT_DIR$/CentipedeSpriteBatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/CentipedeSpriteBatcher-app.iml" filepath="$PROJECT_DIR$/app/CentipedeSpriteBatcher-app.iml" group="CentipedeSpriteBatcher/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/erik-CentipedeSpriteBatcher.iml" filepath="$PROJECT_DIR$/erik-CentipedeSpriteBatcher.iml" group="CentipedeSpriteBatcher" />
     </modules>
   </component>
 </project>

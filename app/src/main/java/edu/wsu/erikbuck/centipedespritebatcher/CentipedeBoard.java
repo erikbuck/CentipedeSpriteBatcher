@@ -307,9 +307,11 @@ public class CentipedeBoard {
         mShooterPositionY = Math.max(mMinimumShooterPositionY, mShooterPositionY);
     }
 
-    public void shoot() {
-        if(0 >= mBulletPositionY) {
+    public boolean shoot() {
+        boolean result = 0 >= mBulletPositionY;
+        if(result) {
             mBulletPositionY = mShooterPositionY;
         }
+        return result;
     }
 }
